@@ -15,6 +15,9 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<S-Right>"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer tab" },
+    ["<S-Left>"] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer tab" },
+    ["<C-J>"] = { "copilot#Accept(<Tab>)", silent = true, expr = true, script = true },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
@@ -25,4 +28,7 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+      ["<C-J>"] = { "copilot#Accept(<Tab>)", silent = true, expr = true, script = true },
+  }
 }
